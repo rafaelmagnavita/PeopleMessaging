@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34114.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoRabbit", "ProjetoRabbit\ProjetoRabbit.csproj", "{096B3477-57EC-4CDB-9632-AFB3A2E973C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoRabbit", "ProjetoRabbit\ProjetoRabbit.csproj", "{096B3477-57EC-4CDB-9632-AFB3A2E973C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{02B7FC37-DB62-4F38-B8DB-491DE15A4197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitProjectFiles", "RabbitProjectFiles\RabbitProjectFiles.csproj", "{DEBD2E7D-5357-47C8-B48B-694C2846DF53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitProjectFiles", "RabbitProjectFiles\RabbitProjectFiles.csproj", "{DEBD2E7D-5357-47C8-B48B-694C2846DF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetQApp", "EasyNetQApp\EasyNetQApp.csproj", "{17194EFE-CD6A-48E7-A7F7-F85FA3E33956}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{DEBD2E7D-5357-47C8-B48B-694C2846DF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEBD2E7D-5357-47C8-B48B-694C2846DF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEBD2E7D-5357-47C8-B48B-694C2846DF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17194EFE-CD6A-48E7-A7F7-F85FA3E33956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17194EFE-CD6A-48E7-A7F7-F85FA3E33956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17194EFE-CD6A-48E7-A7F7-F85FA3E33956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17194EFE-CD6A-48E7-A7F7-F85FA3E33956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
