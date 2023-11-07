@@ -11,14 +11,21 @@ namespace EasyNetQApp
         public static string EXCHANGE = "curso-rabbitmq";
         public static string QUEUE = "person-created";
         public static string ROUTING_KEY = "rh.person-created";
-        private static Person rafa = new Person("Rafael Mag", "1412826306", new DateTime(1997, 04, 29));
+        public static string HOST = "localhost";
+
+        public static Person person = new Person("personel Mag", "1412826306", new DateTime(1997, 04, 29));
         private static IBus bus;
         private static IAdvancedBus advanced;
         private static Exchange exchange;
         private static Queue queue;
-
-        public Program()
+       
+        public Program(string ex, string qu, string key, string host, Person pr)
         {
+            EXCHANGE = ex;
+            QUEUE = qu;
+            ROUTING_KEY = key;
+            person = pr;
+            HOST = host;
             Start();
         }
 
@@ -31,7 +38,7 @@ namespace EasyNetQApp
 
         private static void Start()
         {
-            bus = RabbitHutch.CreateBus("host=localhost");
+            bus = RabbitHutch.CreateBus($"host={HOST}");
             advanced = bus.Advanced;
             queue = advanced.QueueDeclare(QUEUE);
             exchange = advanced.ExchangeDeclare(EXCHANGE, "topic");
@@ -39,7 +46,7 @@ namespace EasyNetQApp
 
         public static void SendMessageAdvanced()
         {
-            advanced.Publish(exchange, ROUTING_KEY, true, new Message<Person>(rafa));
+            advanced.Publish(exchange, ROUTING_KEY, true, new Message<Person>(person));
         }
         public static void GetMessageAdvanced()
         {
@@ -53,7 +60,7 @@ namespace EasyNetQApp
         {
             try
             {
-                bus.PubSub.PublishAsync(rafa).GetAwaiter();
+                bus.PubSub.PublishAsync(person).GetAwaiter();
                 Console.ReadLine();
             }
             catch (Exception ex)
