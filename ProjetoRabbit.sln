@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyNetQApp", "EasyNetQApp\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{720FDFAB-430D-475F-91A9-1FD4383E0985}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Costumers.API", "RabbitMQ.Costumers.API\RabbitMQ.Costumers.API.csproj", "{52B8AB86-D457-40C3-800A-BDC1370501AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Customers.API", "RabbitMQ.Costumers.API\RabbitMQ.Customers.API.csproj", "{52B8AB86-D457-40C3-800A-BDC1370501AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Marketing.API", "RabbitMQ.Marketing.API\RabbitMQ.Marketing.API.csproj", "{74C6304C-F301-473E-ABD1-F2542731C394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetQ.Customers.API", "EasyNetQ.Customers.API\EasyNetQ.Customers.API.csproj", "{160C931D-7AD8-4461-8244-741D20C3031C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{74C6304C-F301-473E-ABD1-F2542731C394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C6304C-F301-473E-ABD1-F2542731C394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C6304C-F301-473E-ABD1-F2542731C394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160C931D-7AD8-4461-8244-741D20C3031C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160C931D-7AD8-4461-8244-741D20C3031C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160C931D-7AD8-4461-8244-741D20C3031C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160C931D-7AD8-4461-8244-741D20C3031C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{DEBD2E7D-5357-47C8-B48B-694C2846DF53} = {02B7FC37-DB62-4F38-B8DB-491DE15A4197}
 		{52B8AB86-D457-40C3-800A-BDC1370501AF} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
 		{74C6304C-F301-473E-ABD1-F2542731C394} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
+		{160C931D-7AD8-4461-8244-741D20C3031C} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19DAFBAF-788D-400F-8541-F03A7BFF27AB}
