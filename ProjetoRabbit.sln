@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Marketing.API", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetQ.Customers.API", "EasyNetQ.Customers.API\EasyNetQ.Customers.API.csproj", "{160C931D-7AD8-4461-8244-741D20C3031C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyNetQ.Marketing.API", "EasyNetQ.Marketing.API\EasyNetQ.Marketing.API.csproj", "{CB06C06F-7AD9-4172-8E78-25CD4616AB6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{160C931D-7AD8-4461-8244-741D20C3031C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{160C931D-7AD8-4461-8244-741D20C3031C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{160C931D-7AD8-4461-8244-741D20C3031C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB06C06F-7AD9-4172-8E78-25CD4616AB6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB06C06F-7AD9-4172-8E78-25CD4616AB6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB06C06F-7AD9-4172-8E78-25CD4616AB6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB06C06F-7AD9-4172-8E78-25CD4616AB6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{52B8AB86-D457-40C3-800A-BDC1370501AF} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
 		{74C6304C-F301-473E-ABD1-F2542731C394} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
 		{160C931D-7AD8-4461-8244-741D20C3031C} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
+		{CB06C06F-7AD9-4172-8E78-25CD4616AB6A} = {720FDFAB-430D-475F-91A9-1FD4383E0985}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {19DAFBAF-788D-400F-8541-F03A7BFF27AB}
