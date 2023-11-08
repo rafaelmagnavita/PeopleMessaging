@@ -1,9 +1,11 @@
+using MassTransit.Customers.API.Bus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using RabbitProjectFiles.Services;
 
 namespace MassTransit.Customers.API
 {
@@ -11,6 +13,16 @@ namespace MassTransit.Customers.API
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IBusService, MassTransitBusService>();
+            services.AddScoped<INotificationService, NotificationService>();
+
+            services.AddMassTransit(c =>
+            {
+                c.UsingRabbitMq((context, config) =>
+                {
+                    config.ConfigureEndpoints(context);
+                });
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

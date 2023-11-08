@@ -1,9 +1,11 @@
+using MassTransit.Marketing.API.Subscribers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using RabbitProjectFiles.Services;
 
 namespace MassTransit.Marketing.API
 {
@@ -12,6 +14,16 @@ namespace MassTransit.Marketing.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<INotificationService, NotificationService>();
+
+            services.AddMassTransit(c =>
+            {
+                c.AddConsumer<CustomerCreatedSubscriber>();
+                c.UsingRabbitMq((context, config) =>
+                {
+                    config.ConfigureEndpoints(context);
+                });
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MassTransit Marketing API", Version = "v1" });
