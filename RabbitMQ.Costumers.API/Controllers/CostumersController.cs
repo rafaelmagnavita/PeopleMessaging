@@ -10,12 +10,12 @@ namespace RabbitMQ.Costumers.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CostumersController : ControllerBase
+    public class CustomersController : ControllerBase
     {
-        const string ROUTING_KEY = "costumer-created";
+        const string ROUTING_KEY = "customer-created";
         private readonly IBusService _bus;
 
-        public CostumersController(IBusService bus)
+        public CustomersController(IBusService bus)
         {
             _bus = bus;
         }
