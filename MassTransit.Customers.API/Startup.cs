@@ -4,20 +4,17 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using RabbitMQ.Costumers.API.Bus;
 
-namespace RabbitMQ.Costumers.API
+namespace MassTransit.Customers.API
 {
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IBusService, RabbitMqClientService>();
             services.AddControllers();
-
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "RabbitMQ Costumers API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MassTransit Customers API", Version = "v1" });
             });
 
         }
@@ -28,7 +25,7 @@ namespace RabbitMQ.Costumers.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RabbitMQ Costumers API"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MassTransit Customers API"));
             }
 
             app.UseRouting();

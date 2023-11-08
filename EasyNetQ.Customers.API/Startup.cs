@@ -21,7 +21,7 @@ namespace EasyNetQ.Customers.API
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "RabbitMQ Costumers API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EasyNetQ Costumers API", Version = "v1" });
             });
 
         }
@@ -32,7 +32,7 @@ namespace EasyNetQ.Customers.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "EasyNetQ Costumers API"));
             }
 
             app.UseRouting();
